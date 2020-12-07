@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: cloud-eureka-server7001  #配置当前应用的名字
+server:
+  port: 7001
+eureka:
+  instance:
+    hostname: localhost  #配置当前eureka服务器的实例名称
+
+  client:
+    fetch-registry: false  #当前eureka本身就是一个服务器端，不需要去其他eureka服务器去获取数据
+    register-with-eureka: false  #当前eureka本身就是一个服务器端，不需要向其他eureka服务器注册
+    server-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
