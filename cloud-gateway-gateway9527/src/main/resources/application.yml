@@ -1,0 +1,22 @@
+server:
+ port: 9527
+spring:
+ application:
+  name: cloud-gateway-gateway9527
+ cloud:
+  gateway:
+   routes:
+    - id: cloud-eureka-consumer80
+      uri: http://localhost:80/
+      predicates: #断言
+       - Path=/user/**
+    - id: cloud-eureka-provider8001
+      uri: http://localhost:8001/
+      predicates: #断言
+       - Path=/movie/**
+eureka:
+ client:
+  register-with-eureka: true
+  fetch-registry: true
+  service-url:
+   defaultZone: http://localhost:7001/eureka/

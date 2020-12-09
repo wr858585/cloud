@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: cloud-eureka-provider8001
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/mydb2?serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    lease-expiration-duration-in-seconds: 2 #eureka server在收到来子某eureka client最后一次心跳后等待时间的上限，默认90秒，超过移除
+    lease-renewal-interval-in-seconds: 1 #eureka client向eureka server发送心跳的时间间隔，默认为30秒
+    instance-id: provider8003 #eureka client实例的名字（显示在eureka server的dashboard网页上）
+    prefer-ip-address: true #在eureka server网页dashboard上显示此eureka client的ip地址
+server:
+  port: 8003

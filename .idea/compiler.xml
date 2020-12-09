@@ -7,16 +7,22 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-eureka-consumer80" />
-        <module name="cloud-eureka-provider8001" />
         <module name="cloud-eureka-server7001" />
+        <module name="cloud-eureka-provider8001" />
+        <module name="cloud-gateway-gateway9527" />
         <module name="cloud-consumer-feign-consumer80" />
+        <module name="cloud-eureka-provider8001 (2)" />
+        <module name="cloud-eureka-provider8001 (1)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cloud-consumer-feign-consumer80" target="1.8" />
       <module name="cloud-eureka-consumer80" target="1.8" />
       <module name="cloud-eureka-provider8001" target="1.8" />
+      <module name="cloud-eureka-provider8001 (1)" target="1.8" />
+      <module name="cloud-eureka-provider8001 (2)" target="1.8" />
       <module name="cloud-eureka-server7001" target="1.8" />
+      <module name="cloud-gateway-gateway9527" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -24,7 +30,10 @@
       <module name="cloud-consumer-feign-consumer80" options="-parameters" />
       <module name="cloud-eureka-consumer80" options="-parameters" />
       <module name="cloud-eureka-provider8001" options="-parameters" />
+      <module name="cloud-eureka-provider8001 (1)" options="-parameters" />
+      <module name="cloud-eureka-provider8001 (2)" options="-parameters" />
       <module name="cloud-eureka-server7001" options="-parameters" />
+      <module name="cloud-gateway-gateway9527" options="-parameters" />
     </option>
   </component>
 </project>

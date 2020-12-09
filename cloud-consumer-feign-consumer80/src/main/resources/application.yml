@@ -9,3 +9,18 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone:  http://localhost:7001/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: consumer80
+
+#设置Feign客户端超时时间（ openfeign默认支持ribbon）
+ribbon:
+ ConnectTimeout: 5000
+#指的是建立连接所用的时间， 适用于网络状况正常的情况下， 两端连接所用的时间
+ ReadTimeout: 5000
+#指的是建立连接后从服务器读取到可用资源所用的时间
+
+#设置Feign远程调用日志信息
+logging:
+  level:
+    com.atguigu.cloud.service.MovieFeignService: debug #前面是service层中远程调用的接口，后面必须是debug级别
